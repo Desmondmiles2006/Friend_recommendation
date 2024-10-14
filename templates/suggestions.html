@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Friend Suggestions</title>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+      }
+      ul {
+         list-style: none;
+         padding: 0;
+         margin: 0;
+      }
+      li {
+         padding: 10px;
+         border-bottom: 1px solid #ccc;
+      }
+      li:last-child {
+         border-bottom: none;
+      }
+      .error {
+         color: red;
+         font-weight: bold;
+      }
+   </style>
+</head>
+<body>
+   <h1>Friend Suggestions for {{ user }}</h1>
+
+   {% if error %}
+   <p class="error">{{ error }}</p>
+   {% else %}
+   <ul>
+      {% for suggestion in suggestions %}
+      <li>{{ suggestion[0] }} (Similarity: {{ suggestion[1] }})</li>
+      {% endfor %}
+   </ul>
+   {% endif %}
+</body>
+</html>

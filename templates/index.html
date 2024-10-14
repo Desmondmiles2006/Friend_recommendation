@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Friend Suggestion</title>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+      }
+      form {
+         width: 50%;
+         margin: 40px auto;
+         padding: 20px;
+         border: 1px solid #ccc;
+         border-radius: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+         display: block;
+         margin-bottom: 10px;
+      }
+      input[type="text"] {
+         width: 100%;
+         height: 40px;
+         padding: 10px;
+         margin-bottom: 20px;
+         border: 1px solid #ccc;
+      }
+      button[type="submit"] {
+         width: 100%;
+         height: 40px;
+         padding: 10px;
+         background-color: #4CAF50;
+         color: #fff;
+         border: none;
+         border-radius: 10px;
+         cursor: pointer;
+      }
+      button[type="submit"]:hover {
+         background-color: #3e8e41;
+      }
+   </style>
+</head>
+<body>
+   <h1>Friend Suggestion</h1>
+   <form action="/suggest_friends" method="post">
+      <label for="user">Enter a user:</label>
+      <input type="text" id="user" name="user" placeholder="e.g. Alice, Bob, Charlie, David, Eve, etc.">
+      <button type="submit">Get Friend Suggestions</button>
+   </form>
+</body>
+</html>
